@@ -20,17 +20,73 @@ font-size: 50px;
 `
 
 const MainContents = styled.div`
+display: flex;
+flex-direction: column;
+
+> div:first-child {
+    text-align: left;
+    margin: 50px 0;
+    > div {
+        display: flex;
+        margin: 40px 0;
+    }
+}
+`
+
+const NavButton = styled.div`
+    margin: 0 20px;
+    font-size: 30px;
+    font-weight: bold;
+    &:hover {
+        cursor: pointer;
+    }
+`
+
+const NavigationAbout = styled.div`
+display: flex;
+flex-direction: column;
+
+> div {
+    display: flex;
+    > div:first-child {
+        width: 400px;
+        height: 500px;
+        background-color: black;
+    }
+}
+`
+
+const ProfileComponent = styled.div`
+width: 460px;
+> h2 {
+    margin: 20px 0;
+    text-align: right;
+}
+
+> div {
+    margin: 20px 0;
+    text-align: right;
+}
+`
+
+const GitChart = styled.img`
+width: 860px;
+margin: 20px 0;
 `
 
 const MainFooter = styled.div`
 width: 100%;
-position: absolute;
-bottom: 0px;
 display: flex;
 flex-direction: column;
 align-items: center;
+`
+
+const MainFooterBox = styled.div`
+display: flex;
+flex-direction: column;
+
 > div {
-    margin: 17px 0px;
+    margin: 7px 0px;
     font-size: 17px;
     > a {
         display: flex;
@@ -45,11 +101,20 @@ align-items: center;
         }
     }
 }
+
+> div:last-child {
+    margin-bottom: 40px;
+}
 `
 
 export { 
     MainContainer,
     MainHeader,
     MainContents,
+    NavigationAbout,
+    NavButton,
+    ProfileComponent,
+    GitChart,
     MainFooter,
+    MainFooterBox,
 };
