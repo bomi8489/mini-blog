@@ -5,6 +5,7 @@ import {
     MainFooter, 
     MainFooterBox, 
     MainHeader,
+    NavButton,
 } from '../Presenter/MainPresenter';
 import {AiFillGithub} from 'react-icons/ai';
 import {SiNaver, SiTistory} from 'react-icons/si';
@@ -14,7 +15,15 @@ const Main = () => {
     return (
         <>
         <MainContainer>
-            <MainHeader>Bomi's</MainHeader>
+            <MainHeader>
+                <div>Bomi's</div>
+                <div>
+                    <NavButton value='about'>About</NavButton>
+                    <NavButton value='stack'>Stack</NavButton>
+                    <NavButton value='archiving'>Archiving</NavButton>
+                    <NavButton value='project'>Project</NavButton>
+                </div>
+            </MainHeader>
             <div>
                 <MainContents>
                     <MainContentsComponent />
