@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import {
     AboutContents,
     AboutMe,
+    ArchivingComponent,
     Banner,
     GitChart,
     ProfileComponent,
@@ -23,10 +24,10 @@ import insta from './images/insta.png';
 import movieApp from './images/movie-app.png';
 import todolist from './images/todolist.png';
 
-const MainContentsComponent = () => {
+const MainContentsComponent = forwardRef((_, ref) => {
 
     return (
-        <div>
+        <div ref={ref}>
             <Banner>
                 <div>
                     <ProfileComponent>
@@ -78,34 +79,41 @@ const MainContentsComponent = () => {
             </AboutMe>
 
             <StackComponent>
-                <div>FrontEnd</div>
                 <div>
+                    <div>FrontEnd</div>
                     <div>
-                        <div>HTML</div>
-                        <AiOutlineHtml5 />
-                    </div>
-                    <div>
-                        <div>CSS</div>
-                        <IoLogoCss3 />
-                    </div>
-                    <div>
-                        <div>JS</div>
-                        <DiJavascript />
-                    </div>
-                    <div>
-                        <div>React</div>
-                        <SiReact />
-                    </div>
-                    <div>
-                        <div>TS</div>
-                        <SiTypescript />
-                    </div>
-                    <div>
-                        <div>Redux</div>
-                        <SiRedux />
+                        <div>
+                            <div>HTML</div>
+                            <AiOutlineHtml5 />
+                        </div>
+                        <div>
+                            <div>CSS</div>
+                            <IoLogoCss3 />
+                        </div>
+                        <div>
+                            <div>JS</div>
+                            <DiJavascript />
+                        </div>
+                        <div>
+                            <div>React</div>
+                            <SiReact />
+                        </div>
+                        <div>
+                            <div>TS</div>
+                            <SiTypescript />
+                        </div>
+                        <div>
+                            <div>Redux</div>
+                            <SiRedux />
+                        </div>
                     </div>
                 </div>
             </StackComponent>
+
+            <ArchivingComponent>
+                <div>archiving</div>
+            </ArchivingComponent>
+
             <hr />
             <ProjectComponent>
                 <div>Project</div>
@@ -172,6 +180,6 @@ const MainContentsComponent = () => {
             </ProjectComponent>
         </div>
     )
-}
+})
 
 export default MainContentsComponent

@@ -4,23 +4,33 @@ const MainContainer = styled.div`
     margin: auto;
     width: 1200px;
     position: relative;
-
-    > div:nth-child(2) {
-        display: flex;
-        justify-content: center;
-    }
 `
 
 const MainHeader = styled.div`
-    height: 120px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 35px;
-    font-weight: bold;
-
-    > div:nth-child(2) {
+    justify-content: center;
+    background-color: ${props => props.position === 0 ? '#0E1116' : 'white'};
+    color: ${props => props.position === 0 ? 'white' : 'black'};
+    box-shadow: ${props => props.position === 0 ? 'none' : '0 1px 0.3rem hsla(0,0%,80%,.8)'};
+    position: fixed;
+    width: 100vw;
+    height: 72px;
+    z-index: 100;
+    > div {
+        width: 1200px;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        > div:first-child {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        > div:nth-child(2) {
+            display: flex;
+        }
     }
 `
 
@@ -39,7 +49,7 @@ const MainContents = styled.div`
 `
 
 const NavButton = styled.div`
-    margin: 0 10px;
+    margin: 0 20px;
     font-size: 25px;
     font-weight: bold;
     &:hover {
@@ -51,6 +61,7 @@ const Banner = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 150px;
     margin-bottom: 100px;
 
     > div {
@@ -59,7 +70,8 @@ const Banner = styled.div`
 `
 
 const AboutMe = styled.div`
-    padding: 40px 0;
+    padding-top: 150px;
+    padding-bottom: 40px;
     margin-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -91,51 +103,64 @@ const AboutContents = styled.div`
 `
 
 const StackComponent = styled.div`
-    width: 800px;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
-    border: solid 5px white;
-    border-radius: 20px;
-
-    > div:first-child {
-        font-size: 50px;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-
-    >div:nth-child(2) {
-        width: 270px;
+    padding-top: 150px;
+    > div {
+        width: 800px;
+        padding: 40px 0;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        > div {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+        border: solid 5px white;
+        border-radius: 20px;
+
+        > div:first-child {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        >div:nth-child(2) {
+            width: 270px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 30px;
-            &:hover {
-                transition: transform 0.1s ease-in-out;
-                transform: scale(1.10) translateY(-5px);
-            }
+            flex-wrap: wrap;
+            justify-content: center;
             > div {
-                font-weight: bold;
-            }
-            > svg {
-                width: 66px;
-                height: 66px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px 30px;
+                &:hover {
+                    transition: transform 0.1s ease-in-out;
+                    transform: scale(1.10) translateY(-5px);
+                }
+                > div {
+                    font-weight: bold;
+                }
+                > svg {
+                    width: 66px;
+                    height: 66px;
+                }
             }
         }
     }
+`
+
+const ArchivingComponent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    margin-bottom: 100px;
 `
 
 const ProjectComponent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 0;
+    padding-top: 150px;
+    padding-bottom: 40px;
     margin-bottom: 100px;
 
     div:has(img) {
@@ -262,6 +287,7 @@ export {
     AboutMe,
     AboutContents,
     StackComponent,
+    ArchivingComponent,
     ProjectComponent,
     NavButton,
     ProfileComponent,
