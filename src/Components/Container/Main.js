@@ -74,7 +74,7 @@ const Main = () => {
                             <a href='https://37degree.tistory.com/' target='_blank' rel="noreferrer"><SiTistory size={33}/></a>
                         </div>
                         <div>
-                            <a href='https://blog.naver.com/PostList.naver?blogId=b____omi' target='_blank' rel="noreferrer"><SiNaver size={33} color='white'/></a>
+                            <a href='https://blog.naver.com/b____omi' target='_blank' rel="noreferrer"><SiNaver size={33} color='white'/></a>
                         </div>
                     </div>
                     <span>© 2023. Kwon Ki Beom. All rights reserved.</span>

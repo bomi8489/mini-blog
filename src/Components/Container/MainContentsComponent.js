@@ -20,6 +20,8 @@ import {AiOutlineHtml5} from 'react-icons/ai';
 import {IoLogoCss3} from 'react-icons/io';
 import {SiReact, SiTypescript, SiRedux} from 'react-icons/si';
 import {DiJavascript} from 'react-icons/di';
+import {AiFillGithub} from 'react-icons/ai';
+import {SiNaver, SiTistory} from 'react-icons/si';
 import insta from './images/insta.png';
 import movieApp from './images/movie-app.png';
 import todolist from './images/todolist.png';
@@ -111,7 +113,27 @@ const MainContentsComponent = forwardRef((_, ref) => {
             </StackComponent>
 
             <ArchivingComponent>
-                <div>archiving</div>
+                <div>Archiving</div>
+                <div>
+                    <div>
+                        <div>Github</div>
+                        <a href='https://github.com/bomi8489' target='_blank' rel="noreferrer">
+                            <AiFillGithub />
+                        </a>
+                    </div>
+                    <div>
+                        <div>Tistory Blog</div>
+                        <a href='https://37degree.tistory.com/' target='_blank' rel="noreferrer">
+                            <SiTistory />
+                        </a>
+                    </div>
+                    <div>
+                        <div>Naver Blog</div>
+                        <a href='https://blog.naver.com/b____omi' target='_blank' rel="noreferrer">
+                            <SiNaver />
+                        </a>
+                    </div>
+                </div>
             </ArchivingComponent>
 
             <hr />

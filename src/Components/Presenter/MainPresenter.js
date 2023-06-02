@@ -54,6 +54,8 @@ const NavButton = styled.div`
     font-weight: bold;
     &:hover {
         cursor: pointer;
+        transition: transform 0.1s ease-in-out;
+        transform: translateY(-3px);
     }
 `
 
@@ -153,6 +155,38 @@ const ArchivingComponent = styled.div`
     padding-top: 150px;
     padding-bottom: 40px;
     margin-bottom: 100px;
+    width: 1200px;
+    
+    > div:first-child {
+        font-size: 50px;
+        font-weight: bold;
+        margin: 30px 0;
+    }
+
+    > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        > div {
+            display: flex;
+            margin: 10px 0;
+            > div {
+                font-size: 36px;
+                width: 240px;
+            }
+            > a {
+                display: flex;
+                align-items: center;
+                > svg {
+                    margin-left: 20px;
+                    width: 36px;
+                    height: 36px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
 `
 
 const ProjectComponent = styled.div`
@@ -175,7 +209,7 @@ const ProjectComponent = styled.div`
         margin: 30px 0;
         display: flex;
         justify-content: space-between;
-        border: solid 5px white;
+        border: solid 3px white;
         border-radius: 20px;
         padding: 50px;
 
