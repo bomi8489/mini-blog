@@ -34,6 +34,9 @@ const MainHeader = styled.div`
     }
 `
 
+const BlogHead = styled.div`
+`
+
 const MainContents = styled.div`
     display: flex;
     flex-direction: column;
@@ -161,6 +164,7 @@ const ArchivingComponent = styled.div`
         font-size: 50px;
         font-weight: bold;
         margin: 30px 0;
+        padding: 50px 0;
     }
 
     > div:nth-child(2) {
@@ -316,6 +320,7 @@ const MainFooterBox = styled.div`
 export { 
     MainContainer,
     MainHeader,
+    BlogHead,
     MainContents,
     Banner,
     AboutMe,

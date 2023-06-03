@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
+    BlogHead,
     MainContainer, 
     MainContents, 
     MainFooter, 
@@ -50,7 +51,7 @@ const Main = () => {
         <>
             <MainHeader position={position}>
                 <div>
-                    <div onClick={onClickHome}>Bomi's</div>
+                    <BlogHead onClick={onClickHome} name={'() => {goTop()}'}>Bomi's</BlogHead>
                     <div>
                         <NavButton onClick={onClickNav} value='about'>About</NavButton>
                         <NavButton onClick={onClickNav} value='stack'>Stack</NavButton>
